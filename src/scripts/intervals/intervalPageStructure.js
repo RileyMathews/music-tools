@@ -6,7 +6,24 @@ const buildIntervalPageStructure = () => {
     const section = ComponentFactory("section", null, "main__intervals")
     section.appendChild(ComponentFactory("h1", "Interval Tool"))
     const selectNoteOne = (ComponentFactory("select", null, null, "intervals__select__noteOne"))
+
+
+    const selectOneDefault = document.createElement("option")
+    selectOneDefault.setAttribute("selected", true)
+    selectOneDefault.setAttribute("value", "")
+    selectOneDefault.setAttribute("disabled", true)
+    selectOneDefault.textContent = "bottom note"
+    selectNoteOne.appendChild(selectOneDefault)
+
     const selectNoteTwo = (ComponentFactory("select", null, null, "intervals__select__noteTwo"))
+
+    const selectTwoDefault = document.createElement("option")
+    selectTwoDefault.setAttribute("selected", true)
+    selectTwoDefault.setAttribute("value", "")
+    selectTwoDefault.setAttribute("disabled", true)
+    selectTwoDefault.textContent = "top note"
+    selectNoteTwo.appendChild(selectTwoDefault)
+
     notes.forEach(note => {
         const optionOne = (ComponentFactory("option", note))
         optionOne.setAttribute("value", notes.indexOf(note))
