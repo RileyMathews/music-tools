@@ -8,7 +8,7 @@ const buildMetronomePage = () => {
 
     section.appendChild(ComponentFactory("h1", "metronome"))
     section.appendChild(ComponentFactory("button", "play?", "btn-primary", "metronome__start"))
-    section.appendChild(ComponentFactory("button", "stop?", "btn-primary", "metronome__stop"))
+    section.appendChild(ComponentFactory("input", "BPM", "input", "metronome__bpm"))
     return section
 }
 

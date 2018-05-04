@@ -1,9 +1,16 @@
 //app to handle button clicking for metronome page
 const metronome = require("./metronomePlay")
 
+
 const metronomeBtnActivate = () => {
     $("#metronome__start").on("click", () => {
-        metronome(1000)
+        if (metronome.playing()) {
+            metronome.stop()
+        } else {
+            let speed = parseFloat($("#metronome__bpm").val())
+            metronome.rate(speed)
+            metronome.play()
+        }
     })
 }
 
