@@ -10,28 +10,23 @@ const appendHTML = require("./appendHTML")
 
 const navButtons = () => {
     $("#nav__home").on("click", () => {
-        nukeHTML("#main--output")
-        appendHTML(welcomePageBuilder(), "#main--output")
+        welcomePageBuilder()
     })
 
     $("#nav__intervals").on("click", () => {
-        nukeHTML("#main--output")
-        appendHTML(intervalPageBuilder(), "#main--output")
+        intervalPageBuilder()
     })
 
     $("#nav__metronome").on("click", () => {
-        nukeHTML("#main--output")
-        appendHTML(metronomePageBuilder(), "#main--output")
+        metronomePageBuilder()
     })
 
     $("#nav__chords").on("click", () => {
-    nukeHTML("#main--output")
-    appendHTML(chordPageBuilder(), "#main--output")
+    chordPageBuilder()
     })
 
     $("#nav__modes").on("click", () => {
-    nukeHTML("#main--output")
-    appendHTML(modePageBuilder(), "#main--output")
+    modePageBuilder()
     })
 }
 

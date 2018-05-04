@@ -1,6 +1,10 @@
 //function to return html element representing the welcome page of the app
 const componentFactory = require("./ComponentFactory")
+const appendHTML = require("./appendHTML")
+const nukeHTML = require("./nukeHTML")
+
 const welcomePageBuilder = () => {
+    nukeHTML("#main--output")
     const fragment = document.createDocumentFragment()
     const section = document.createElement("section")
     section.appendChild(componentFactory("h1", "Welcome", null, "welcome--main"))
@@ -9,7 +13,7 @@ const welcomePageBuilder = () => {
 
     fragment.appendChild(section)
 
-    return fragment
+    appendHTML(fragment, "#main--output")
 }
 
 module.exports = welcomePageBuilder

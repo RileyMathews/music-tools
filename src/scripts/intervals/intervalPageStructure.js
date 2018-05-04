@@ -18,9 +18,10 @@ const buildIntervalPageStructure = () => {
     section.appendChild(selectNoteOne)
     section.appendChild(selectNoteTwo)
 
-    section.appendChild(ComponentFactory("button", "Get Interval", "btn--primary", "intervals__submit"))
-    section.appendChild(ComponentFactory("section", null, null, "intervals__output"))
+    const submitButton = ComponentFactory("button", "Get Interval", "btn--primary", "intervals__submit")
+    section.appendChild(submitButton)
 
+    section.appendChild(ComponentFactory("section", null, null, "intervals__output"))
     return section
 }
 
