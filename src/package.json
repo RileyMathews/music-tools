@@ -15,6 +15,6 @@
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.0.1",
     "grunt-eslint": "^20.1.0",
-    "grunt-sass": "^2.1.0",
+    "grunt-sass": "^2.1.0"
   }
 }
