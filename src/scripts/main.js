@@ -6,3 +6,4 @@ const navEventHandlers = require("./navEventHandlers")
 
 navEventHandlers()
 appendHTML(welcomePageBuilder(), "#main--output")
+
