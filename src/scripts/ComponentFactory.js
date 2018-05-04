@@ -1,7 +1,9 @@
 //function to return html elements
-const componentFactoryText = (tag, content, classes, id) => {
+const componentFactory = (tag, content, classes, id) => {
     const element = document.createElement(tag)
-    element.textContent = content
+    if (typeof content !== "undefined" && content !== null) {
+        element.textContent = content
+    }
     if (typeof classes !== "undefined" && classes !== null) {
         element.classList += classes
     }
@@ -11,4 +13,4 @@ const componentFactoryText = (tag, content, classes, id) => {
     return element
 }
 
-module.exports = componentFactoryText
+module.exports = componentFactory

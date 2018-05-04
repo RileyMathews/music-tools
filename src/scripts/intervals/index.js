@@ -1,10 +1,10 @@
 //index js file for intervals directory
+const intervalPageStructure = require("./intervalPageStructure")
+
 //function to call the intervals tool page
 const buildIntervalTools = () => {
     const fragment = document.createDocumentFragment()
-    const placeholderHeader = document.createElement("h1")
-    placeholderHeader.textContent = "Interval Tools"
-    fragment.appendChild(placeholderHeader)
+    fragment.appendChild(intervalPageStructure())
     return fragment
 }
 
