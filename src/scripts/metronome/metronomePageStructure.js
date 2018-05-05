@@ -13,6 +13,9 @@ const buildMetronomePage = () => {
     bpm.setAttribute("type", "number")
     section.appendChild(bpm)
     section.appendChild(ComponentFactory("button", "play", "btn btn-primary", "metronome__start"))
+    const alert = ComponentFactory("div", "please enter a valid number", "alert alert-warning alert-dismissible fade show", "metronome--alert")
+    alert.setAttribute("role", "alert")
+    section.appendChild(alert)
     return section
 }
 

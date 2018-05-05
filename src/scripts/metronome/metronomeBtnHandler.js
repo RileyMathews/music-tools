@@ -14,7 +14,7 @@ const metronomeBtnActivate = () => {
                 metronome.rate(rate)
                 metronome.play()
             } else {
-                alert("please enter a non decimal number")
+                $("#metronome--alert").slideDown(300).delay(2000).slideUp(300)
             }
         }
     })

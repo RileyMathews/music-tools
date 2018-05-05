@@ -38,6 +38,10 @@ const buildIntervalPageStructure = () => {
 
     const submitButton = ComponentFactory("button", "Get Interval", "btn btn-primary", "intervals__submit")
     section.appendChild(submitButton)
+    const alert = ComponentFactory("div", "please select both notes", "alert alert-warning alert-dismissible fade show", "interval--alert")
+    alert.setAttribute("role", "alert")
+    section.appendChild(alert)
+
 
     section.appendChild(ComponentFactory("section", null, null, "intervals__output"))
     return section

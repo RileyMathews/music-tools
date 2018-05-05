@@ -10,6 +10,7 @@ const buildIntervalTools = () => {
     const fragment = document.createDocumentFragment()
     fragment.appendChild(intervalPageStructure())
     appendHTML(fragment, "#main--output")
+    $("#interval--alert").css("display", "none")
     activateBtn()
 }
 

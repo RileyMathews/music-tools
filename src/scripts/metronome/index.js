@@ -7,6 +7,7 @@ const activateButton = require("./metronomeBtnHandler")
 const metronomePageBuilder = () => {
     nukeHTML("#main--output")
     appendHTML(metronomePageStructure(), "#main--output")
+    $("#metronome--alert").css("display", "none")
     activateButton()
 }
 
