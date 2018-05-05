@@ -5,6 +5,7 @@ const notes = require("../notesDB")
 const buildIntervalPageStructure = () => {
     const section = ComponentFactory("section", null, "main__intervals")
     section.appendChild(ComponentFactory("h1", "Interval Tool"))
+    section.appendChild(ComponentFactory("p", "Enter a couple of notes and figure out what the interval between them is"))
     const selectNoteOne = (ComponentFactory("select", null, null, "intervals__select__noteOne"))
 
 
@@ -35,7 +36,7 @@ const buildIntervalPageStructure = () => {
     section.appendChild(selectNoteOne)
     section.appendChild(selectNoteTwo)
 
-    const submitButton = ComponentFactory("button", "Get Interval", "btn--primary", "intervals__submit")
+    const submitButton = ComponentFactory("button", "Get Interval", "btn btn-primary", "intervals__submit")
     section.appendChild(submitButton)
 
     section.appendChild(ComponentFactory("section", null, null, "intervals__output"))

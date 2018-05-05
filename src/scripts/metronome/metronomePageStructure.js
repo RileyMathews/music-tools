@@ -7,8 +7,12 @@ const buildMetronomePage = () => {
     const section = ComponentFactory("section", null, "metronome")
 
     section.appendChild(ComponentFactory("h1", "metronome"))
-    section.appendChild(ComponentFactory("button", "play?", "btn-primary", "metronome__start"))
-    section.appendChild(ComponentFactory("input", "BPM", "input", "metronome__bpm"))
+    section.appendChild(ComponentFactory("p", "enter a desired bpm and hit play"))
+    const bpm = ComponentFactory("input", "BPM", "input", "metronome__bpm")
+    bpm.setAttribute("placeholder", "BPM")
+    bpm.setAttribute("type", "number")
+    section.appendChild(bpm)
+    section.appendChild(ComponentFactory("button", "play", "btn btn-primary", "metronome__start"))
     return section
 }
 

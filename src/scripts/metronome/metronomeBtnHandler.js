@@ -8,8 +8,14 @@ const metronomeBtnActivate = () => {
             metronome.stop()
         } else {
             let speed = parseFloat($("#metronome__bpm").val())
-            metronome.rate(speed)
-            metronome.play()
+            if (!isNaN(speed)) {
+                const rate = speed / 120
+                console.log(speed,rate)
+                metronome.rate(rate)
+                metronome.play()
+            } else {
+                alert("please enter a non decimal number")
+            }
         }
     })
 }
