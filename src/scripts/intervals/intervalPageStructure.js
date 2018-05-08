@@ -3,6 +3,9 @@ const ComponentFactory = require("../ComponentFactory")
 const notes = require("../notesDB")
 
 const buildIntervalPageStructure = () => {
+    const $section = $("")
+
+
     const section = ComponentFactory("section", null, "main__intervals")
     section.appendChild(ComponentFactory("h1", "Interval Tool"))
     section.appendChild(ComponentFactory("p", "Enter a couple of notes and figure out what the interval between them is"))
