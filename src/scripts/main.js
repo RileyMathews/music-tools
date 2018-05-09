@@ -7,3 +7,7 @@ const navEventHandlers = require("./navEventHandlers")
 navEventHandlers()
 appendHTML(welcomePageBuilder(), "#main--output")
 
+/*
+things to add
+-- transposing tool
+*/
